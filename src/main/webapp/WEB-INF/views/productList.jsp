@@ -16,15 +16,15 @@
     <tr>
         <th>Product Name</th>
         <th>Category</th>
-        <th>Condition</th>
         <th>Price</th>
+        <th>Quantity</th>
     </tr>
     </thead>
     <tr>
         <td>${product.productName}</td>
         <td>${product.productCategory}</td>
-        <td>${product.productCondition}</td>
         <td>${product.productPrice}</td>
+        <td>${product.unitInStock}</td>
     </tr>
 </table>
 </body>
