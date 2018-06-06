@@ -16,12 +16,24 @@ public class ProductDao {
 		product1.setProductCondition("New");
 		product1.setProductDescription("Guiter");
 		product1.setProductManufacturer("New India");
-		product1.setProductName("Awesome");
+		product1.setProductName("Guiter");
 		product1.setProductPrice(200.0);
 		product1.setProductStatus("Available");
 		product1.setUnitInStock(2);
+		
+		Product product2 = new Product();
+		product2.setProductCategory("Instrument");
+		product2.setProductCondition("New");
+		product2.setProductDescription("Tabla");
+		product2.setProductManufacturer("New India");
+		product2.setProductName("Tabla");
+		product2.setProductPrice(500.0);
+		product2.setProductStatus("Available");
+		product2.setUnitInStock(2);
+		
 		productList = new ArrayList<Product>();
 		productList.add(product1);
+		productList.add(product2);
 		return productList;
 		
 	}

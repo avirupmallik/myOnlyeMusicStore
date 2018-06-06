@@ -1,9 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
-<%@include file="/WEB-INF/views/template/header.jsp" %>
-<!DOCTYPE html>
-<html lang="en">
- <%--  <head>
+
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,66 +57,4 @@
       </div>
     </div>
 
- --%>
 
-
-
-	<div class="container-wrapper">
-		<div calss="container">
-			<div class="page-header">
-				<h1>All Products</h1>
-				<p class="lead">Checkout all the new products here!</p>
-			</div>
-			<table class="table table-stripped table">
-				<thead>
-					<tr class="bg-success">
-						<th>Photo Thumb</th>
-						<th>Product Name</th>
-						<th>Product Category</th>
-						<th>Product Description</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<c:forEach items="${products}"  var = "product">
-				<tr>
-				<td><img src ="#" alt = "image"/></td>
-				<td>${product.productName}</td>
-				<td>${product.productCategory}</td>
-				<td>${product.productCondition}</td>
-				<td>${product.productPrice} INR</td>
-				</tr>
-				</c:forEach>
-			</table>
-			<%-- <!-- FOOTER -->
-			<footer>
-				<p class="pull-right">
-					<a href="#">Back to top</a>
-				</p>
-				<p>
-					&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot;
-					<a href="#">Terms</a>
-				</p>
-			</footer>
-		</div>
-	</div>
-	<!-- /.container -->
-
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>window.jQuery ||
-document.write('<script src="<c:url value="/resources/js/jquery.min.js" />"><\/script>')</script>
-<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
- 
-	
-
-</body>
-
-</html>
- --%>
- 
- <%@include file="/WEB-INF/views/template/footer.jsp" %>
