@@ -11,7 +11,7 @@
 		</div>
 		<!-- /.container -->
 		<h3>
-			<a href=<c:url value="/admin/productInventory"/>></a>Product
+			<a href=<c:url value="/admin/productInventory"/> class="btn btn-link">Product
 			Inventory</a>
 		</h3>
 		<p>Here you cn check,view and modify the product inventory</p>
