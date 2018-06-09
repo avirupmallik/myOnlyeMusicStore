@@ -39,4 +39,20 @@ public class HomeController {
 
 	        return "viewProduct";
 	    }
+	    
+	    @RequestMapping("/admin")
+	    public String adminView() {
+
+	        /*Product product = productDao.getProductById(productId);
+	        model.addAttribute(product);*/
+
+	        return "admin";
+	    }
+	    @RequestMapping("/admin/productInventory")
+	    public String productInventory(Model model) {
+	        List<Product> products = productDao.getAllProducts();
+	        model.addAttribute("products", products);
+
+	        return "productInventory";
+	    }
 }
