@@ -1,1 +1,4 @@
-C:\Users\Avirup\eclipse-workspace\myeMusicStore\src\main\java\com\emusicstore\HomeController.java
+C:\Users\Avirup\eclipse-workspace\myeMusicStore\src\main\java\com\emusicstore\controller\HomeController.java
+C:\Users\Avirup\eclipse-workspace\myeMusicStore\src\main\java\com\emusicstore\dao\ProductDao.java
+C:\Users\Avirup\eclipse-workspace\myeMusicStore\src\main\java\com\emusicstore\model\Product.java
+C:\Users\Avirup\eclipse-workspace\myeMusicStore\src\main\java\com\emusicstore\dao\impl\ProductDaoImpl.java
