@@ -20,11 +20,11 @@
           <div class="form-group">
             <label for="category">Category</label>
             <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category"
-                                                             value="instrument" />Instrument</label>
+                                                             value="Instrument" />Instrument</label>
             <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category"
-                                                             value="record" />Record</label>
+                                                             value="Record" />Record</label>
             <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category"
-                                                             value="accessory" />Accessory</label>
+                                                             value="Accessory" />Accessory</label>
         </div>
          <div class="form-group">
             <label for="description">Description</label>
@@ -39,17 +39,17 @@
         <div class="form-group">
             <label for="condition">Condition</label>
             <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
-                                                             value="new" />New</label>
+                                                             value="New" />New</label>
             <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
-                                                             value="used" />Used</label>
+                                                             value="Used" />Used</label>
         </div>
 
         <div class="form-group">
             <label for="status">Status</label>
             <label class="checkbox-inline"><form:radiobutton path="productStatus" id="status"
-                                                             value="active" />Active</label>
+                                                             value="Available" />Available</label>
             <label class="checkbox-inline"><form:radiobutton path="productStatus" id="status"
-                                                             value="inactive" />Inactive</label>
+                                                             value="Unavailable" />Unavailable</label>
         </div>
 
         <div class="form-group">
