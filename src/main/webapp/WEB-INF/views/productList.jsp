@@ -2,8 +2,6 @@
 <%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/template/header.jsp" %>
-<!DOCTYPE html>
-<html lang="en">
  <%--  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,7 +65,7 @@
 
 	<div class="container-wrapper">
 		<div calss="container">
-			<div class="page-header">
+			<div class="page-header" class="h2.pos_left">
 				<h1>All Products</h1>
 				<p class="lead">Checkout all the new products here!</p>
 			</div>
@@ -84,7 +82,10 @@
 				</thead>
 				<c:forEach items="${products}"  var = "product">
 				<tr>
-				<td><img src ="#" alt = "image"/></td>
+				 <td><img src="<c:url value="/resources/images/${product.productId}.jpg" /> " alt="image"
+                              width="40%" height="50%"/></td> 
+                      <%-- <td><img src="<c:url value="C:/Program Files/Apache Software Foundation/Tomcat 9.0/wtpwebapps/myeMusicStore/WEB-INF/resources/images/${product.productId}.png" /> " alt="image"
+                             style="width:100%"/></td>  --%>      
 				<td>${product.productName}</td>
 				<td>${product.productCategory}</td>
 				<td>${product.productCondition}</td>

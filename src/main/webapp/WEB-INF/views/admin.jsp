@@ -1,12 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
-<!DOCTYPE html>
-<html lang="en">
-
 <div class="container-wrapper">
 	<div calss="container">
-		<div class="page-header">
-			<h1>Administration</h1>
+		<div class="page-header" >
+			<h1 class="h2.pos_left">Administration</h1>
 			<p class="lead">This is the administration page</p>
 		</div>
 		<!-- /.container -->
