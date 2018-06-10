@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -83,7 +83,7 @@ public class HomeController {
 	    }
 	    
 	    @RequestMapping(value="/admin/productInventory/addProduct",method=RequestMethod.POST)
-	    public String addProductPost(@ModelAttribute("product") Product product, BindingResult result,
+	    public String addProductPost(@Valid @ModelAttribute("product") Product product, BindingResult result,
                 HttpServletRequest request) {
 	        
 	    	 if (result.hasErrors()) {
@@ -139,7 +139,7 @@ public class HomeController {
 	    }
 
 	    @RequestMapping(value = "/admin/productInventory/editProduct", method = RequestMethod.POST)
-	    public String editProduct(@ModelAttribute("product") Product product, BindingResult result, Model model,
+	    public String editProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, Model model,
 	                              HttpServletRequest request) {
 
 	        if (result.hasErrors()) {

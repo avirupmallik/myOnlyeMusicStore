@@ -8,8 +8,9 @@
 	 <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="<c:url value="C:\\Users\\Avirup\\image\\${product.productId}.png" /> " alt="image"
-                             style="width:100%"/>
+                
+                    <img src="<c:url value="/resources/images/${product.productId}.jpg" /> " alt="image"
+                             width="70%" height="50%"/>
                 </div>
 
                 <div class="col-md-5">

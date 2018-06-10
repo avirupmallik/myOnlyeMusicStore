@@ -26,14 +26,18 @@
 				</thead>
 				<c:forEach items="${products}"  var = "product">
 				<tr>
-				<td><img src="<c:url value="C:\\Users\\Avirup\\image\\${product.productId}.png" /> " alt="image"
-                             style="width:100%"/></td>
+				  <td><img src="<c:url value="/resources/images/${product.productId}.jpg" /> " alt="image"
+                              width="40%" height="50%"/></td> 
+                            <%--  <td><img src="<c:url value="C:/Program Files/Apache Software Foundation/Tomcat 9.0/wtpwebapps/myeMusicStore/WEB-INF/resources/images/${product.productId}.png" /> " alt="image"
+                             style="width:100%"/></td>  --%>
 				<td>${product.productName}</td>
 				<td>${product.productCategory}</td>
 				<td>${product.productCondition}</td>
 				<td>${product.productPrice} INR</td>
 				<td><a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />"
                     ><span class="glyphicon glyphicon-remove"></span></a></td>
+                    <td><a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}" />"
+                    ><span class="glyphicon glyphicon-pencil"></span></a></td>
 				</tr>
 				</c:forEach>
 			</table>
