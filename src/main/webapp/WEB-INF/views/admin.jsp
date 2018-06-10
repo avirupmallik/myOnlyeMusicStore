@@ -6,12 +6,18 @@
 			<h1 class="h2.pos_left">Administration</h1>
 			<p class="lead">This is the administration page</p>
 		</div>
+		<c:if test="${pageContext.request.userPrincipal.name != null}">
+            <h2>
+                Welcome: ${pageContext.request.userPrincipal.name} | <a href="<c:url
+                value="/j_spring_security_logout" />">Logout</a>
+            </h2>
+        </c:if>
 		<!-- /.container -->
 		<h3>
-			<a href=<c:url value="/admin/productInventory"/> class="btn btn-link">Product
-			Inventory</a>
+			<a href="<c:url value="/admin/productInventory"/>" class="btn btn-info">Product
+			Inventory</a></input>
 		</h3>
-		<p>Here you cn check,view and modify the product inventory</p>
+		<p>Here you can check,view and modify the product inventory</p>
 
 		<script
 			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

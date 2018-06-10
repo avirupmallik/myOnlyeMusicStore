@@ -101,7 +101,8 @@
       </a>
     </div><!-- /.carousel -->
 
-
+<br></br>
+<br></br>
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -129,7 +130,8 @@
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
+<br></br>
+<br></br>
 
     
      <%@include file="/WEB-INF/views/template/footer.jsp"%>
