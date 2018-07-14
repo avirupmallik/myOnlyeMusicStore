@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.emusicstore.model.Customer;
 import com.emusicstore.model.Product;
+import com.emusicstore.service.CustomerService;
 import com.emusicstore.service.ProductService;
 
 @Controller
@@ -16,6 +18,9 @@ public class AdminHome {
 	
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private CustomerService customerService;
 	
 	@RequestMapping("/")
 	private String adminPage() {
@@ -32,7 +37,8 @@ public class AdminHome {
 	
 	@RequestMapping("/customer")
 	public String customerManagement(Model model) {
-		
+		List<Customer> customerList=customerService.getAllCustomer();
+		model.addAttribute("customerList", customerList);
 		return "customerManagement";
 	}
 }

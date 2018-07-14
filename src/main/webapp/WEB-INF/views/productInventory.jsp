@@ -16,13 +16,16 @@
 
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js" > </script>
+     <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
     <!-- Carousel CSS -->
     <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
-
+<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- Main CSS -->
    <%--  <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
  --%>
@@ -62,7 +65,16 @@
 
     </div>
 </div>
-
+<script>
+$(document).ready(function(){
+	var searchCondition= '${searchCondition}'
+	$('.table').DataTable({
+		"lengthMenu":[[1,2,3,5,10,-1],[1,2,3,5,10,"All"]],
+		"oSearch"   :{"sSeach":searchCondition}
+		
+	});
+});
+</script>
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">

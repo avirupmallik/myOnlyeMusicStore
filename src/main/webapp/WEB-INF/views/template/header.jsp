@@ -21,7 +21,11 @@
 
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js" > </script>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
@@ -30,6 +34,8 @@
 
     <!-- Main CSS -->
    <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+   
+   <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 
 
 </head>
@@ -57,21 +63,22 @@
                         <li><a href="<c:url value="/product/productList" />">Products</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                    <ul class="nav navbar-nav pull-right">
+                   <ul class="nav navbar-nav pull-right">
                         <c:if test="${pageContext.request.userPrincipal.name!=null}">
                         <li><a>Welcome:${pageContext.request.userPrincipal.name}</a></li>
                           <a href="<c:url value="/j_spring_security_logout" />">Logout</a>
                         </c:if>
-                         <c:if test="${pageContext.request.userPrincipal.name!=admin}">
+                         <c:if test="${pageContext.request.userPrincipal.name!='admin'}">
                          <a href="<c:url value="/customer/cart" />">Cart</a>
                         </c:if>
                         
                         <c:if test="${pageContext.request.userPrincipal.name=='admin'}">
                          <a href="<c:url value="/admin/" />">Admin</a>
                         </c:if>
-                        
+                        <c:if test="${pageContext.request.userPrincipal.name==null}">
                         <li><a href="<c:url value="/login/" />">Login</a></li>
-                        <li><a href="<c:url value="/register" />">Register</a></li>
+                        <li><a href="<c:url value="/register"/>">Register</a></li>
+                        </c:if>
                     </ul>
                 </div>
             </div>
